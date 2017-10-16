@@ -1,0 +1,6 @@
+function [dco_ofdm_ch1, dco_ofdm_ch2, dco_qam_ch1, dco_qam_ch2, SM_bits] = SM_ofdm_generation_adaptive_modulation(M, P, OFDMParameters)
+
+
+[dco_ofdm_ch1, dco_ofdm_ch2, dco_qam_ch1, dco_qam_ch2, SM_bits] = SM_generate_ofdm_signal_adaptive_modulation(M, P, OFDMParameters.frames, OFDMParameters.Nfft, OFDMParameters.cp_length, ...
+    OFDMParameters.omitted_carriers, OFDMParameters.filter_type, OFDMParameters.samples_per_symbol, OFDMParameters.upper_clipping, ...
+    OFDMParameters.lower_clipping, OFDMParameters.roll_off_factor, max(M), OFDMParameters.number_of_pilot_frames, OFDMParameters.frame_eq_mult);
